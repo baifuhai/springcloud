@@ -1,0 +1,25 @@
+CAP
+C：Consistency 一致性
+A：Availability 可用性
+P：Partition Tolerance 分区容错性（一定要有）
+
+一个分布式系统不可能同时满足CAP这三个需求，最多只能同时满足两个，P一定要有，CA之间选一个。
+
+Eureka是AP
+Zookeeper是CP
+
+Eureka可以很好的应对因网络故障导致部分节点失去联系的情况，而不会想zookeeper那样使整个注册服务瘫痪。
+
+Ribbon
+Spring Cloud Ribbon是基于Netflix Ribbon实现的一套客户端的负载均衡的工具。
+集中式：在服务的消费方和提供方之间使用独立的设施（硬件，如F5；软件，如nginx），由该设施负责把访问请求通过某种策略转发至服务的提供方。
+进程内：将逻辑集成到消费方，消费方从服务注册中心获取有哪些地址可用，然后从中选出一个合适的服务器。如Ribbon
+
+Feign
+声明式的web service客户端，让编写web service客户端非常简单，使用方法是创建一个接口，然后在上面添加注解即可
+
+Hystrix
+服务熔断降级
+
+Zuul
+代理、路由、过滤
