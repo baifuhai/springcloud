@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ConfigClientController {
+
 	@Value("${spring.application.name}")
 	private String applicationName;
 
@@ -19,6 +20,7 @@ public class ConfigClientController {
 	public String getConfig() {
 		String str = "applicationName: " + applicationName + "\t eurekaServers:" + eurekaServers + "\t port: " + port;
 		System.out.println("******str: " + str);
-		return "applicationName: " + applicationName + "\t eurekaServers:" + eurekaServers + "\t port: " + port;
+		return str;
 	}
+
 }

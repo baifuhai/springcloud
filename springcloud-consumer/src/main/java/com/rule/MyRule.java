@@ -18,8 +18,7 @@ public class MyRule extends AbstractLoadBalancerRule {
 	private int total = 0; 			// 总共被调用的次数，目前要求每台被调用5次
 	private int currentIndex = 0;	// 当前提供服务的机器号
 
-	public Server choose(ILoadBalancer lb, Object key)
-	{
+	public Server choose(ILoadBalancer lb, Object key) {
 		if (lb == null) {
 			return null;
 		}
